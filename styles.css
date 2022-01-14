@@ -10,7 +10,7 @@
     /* Neutral */
 
     --main-bg: hsl(217, 54%, 11%);
-    --card-bg: hsl(215, 32%, 27%);
+    --card-bg: hsl(216, 50%, 16%);
     --line: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
 
@@ -27,26 +27,63 @@ body {
     margin: auto;
     border-radius: 20px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: fit-content;
 }
 
 .image {
     border-radius: 10px;
-    margin: auto;
-}
-
-.name {
-    color: var(--white);
-    font-weight: 600;
+    margin: 20px;
+    width: 90%;
 }
 
 .line {
     color: var(--line);
     font-weight: 400;
+    margin: 0 20px;
 }
 
 #eth {
     color: var(--cyan);
+    margin-left: 5px;
+}
+
+ul {
+    margin: 20px;
+    padding: 0;
+
+}
+
+li {
+    display: inline;
+}
+
+.name {
+    color: var(--white);
     font-weight: 600;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+.eth {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.eth img{
+    padding-right: 5px;
+}
+
+.time img {
+    padding-right: 5px;
+}
+
+.time {
+    padding-right: 0;
+    float: right;
+    margin: 0;
 }
 
 .attribution {
@@ -55,4 +92,10 @@ body {
 }
 .attribution a {
         color: hsl(228, 45%, 44%);
+}
+
+hr {
+    padding: 0 160px;
+    margin: 10px auto;
+    background: var(--line);
 }
