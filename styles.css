@@ -16,33 +16,45 @@
 
 }
 
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
+    min-height: 100vh;
     font-family: "Outfit", sans-serif;
     font-size: 18px;
     background-color: var(--main-bg);
 }
 
 .container {
+    position: absolute;
+    inset: 0;
     background-color: var(--card-bg);
     margin: auto;
+    padding: 20px;
     border-radius: 20px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    width: 375px;
+    width: 360px;
     height: fit-content;
 }
 
 .image {
     border-radius: 10px;
-    margin: 20px;
-    width: 90%;
+    width: 100%;
+    display: block;
 }
 
+
+
 .line {
-    color: var(--line);
+    color: var(--soft-blue);
     font-weight: 400;
-    margin: 0 20px;
+    margin: 20px 0;
 }
 
 #eth {
@@ -50,52 +62,82 @@ body {
     margin-left: 5px;
 }
 
-ul {
-    margin: 20px;
-    padding: 0;
-
+.price-time {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 li {
-    display: inline;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 .name {
     color: var(--white);
     font-weight: 600;
-    margin-left: 20px;
-    margin-top: 0px;
 }
 
 .eth {
     color: var(--cyan);
     font-weight: 600;
+    margin: 0;
 }
 
 .eth img{
     padding-right: 5px;
+    width: 18px;
+}
+
+.time {
+    margin: 0;
 }
 
 .time img {
     padding-right: 5px;
 }
 
-.time {
-    padding-right: 0;
-    float: right;
-    margin: 0;
+
+
+.preview::after {
+    content: "";
+    display: block;
+    font-size: 1px;
+    width: 100%;
+    height: 1px;
+    border: solid 1px var(--line);
+
 }
 
 .attribution {
     font-size: 11px;
     text-align: center;
 }
+
 .attribution a {
         color: hsl(228, 45%, 44%);
 }
 
-hr {
-    padding: 0 160px;
-    margin: 10px auto;
-    background: var(--line);
+.credit {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 400px;
+    height: 40px;
+    display: flex;
+}
+
+.img-avatar {
+    width: 40px;
+    height: 40px;
+    border: solid 1px var(--white);
+    border-radius: 50%;
+    display: inline;
+}
+
+.credit-text {
+    margin: auto 20px;
+}
+
+span {
+    color: var(--white);
 }
