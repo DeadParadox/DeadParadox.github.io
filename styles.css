@@ -27,6 +27,11 @@ body {
     font-family: "Outfit", sans-serif;
     font-size: 18px;
     background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: visible;
+    padding: 25px;
 }
 
 .container {
@@ -41,6 +46,19 @@ body {
     flex-direction: column;
     width: 360px;
     height: fit-content;
+}
+
+.container::before {
+    content: "";
+    width: 390px;
+    height: 650px;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background: hsl(216, 46%, 8%);
+    border-radius: 40px;
+    z-index: -1;
 }
 
 .image {
@@ -97,7 +115,40 @@ li {
     padding-right: 5px;
 }
 
+.image-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--cyan);
+    position: relative;
+}
 
+.image-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--cyan);
+    opacity: 0;
+    display: grid;
+    place-items: center;
+    justify-items: center;
+    border-radius: 10px;
+    transition: opacity .5s ease-in-out;
+}
+
+.image-overlay:hover {
+    opacity: 0.6;
+}
+
+.name:hover {
+    color: var(--cyan);
+}
+
+.credit-text span:hover {
+    color: var(--cyan);
+}
 
 .preview::after {
     content: "";
@@ -111,6 +162,11 @@ li {
 
 .attribution {
     font-size: 11px;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    justify-content: center;
     text-align: center;
 }
 
