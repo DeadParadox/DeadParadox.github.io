@@ -60,6 +60,24 @@ body {
     z-index: -1;
 }
 
+@media (max-width: 390px) {
+    .container {
+        width: fit-content;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container::before {
+        height: 100%;
+        width: 110%;
+        padding: 0 25px;
+        overflow: hidden;
+    }
+
+}
+
+
+
 .image {
     border-radius: 10px;
     width: 100%;
@@ -163,7 +181,7 @@ li {
     font-size: 11px;
     display: flex;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 3px;
     justify-content: center;
     text-align: center;
