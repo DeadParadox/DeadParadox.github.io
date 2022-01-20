@@ -140,6 +140,12 @@ li {
     position: relative;
 }
 
+.stat-list {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .image-overlay {
     height: 100%;
     width: 100%;
